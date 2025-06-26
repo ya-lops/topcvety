@@ -1,0 +1,95 @@
+---
+import CardGallery from "@/components/card/CardGallery.astro";
+import CardHeader from "@/components/card/CardHeader.astro";
+import CardTags from "@/components/card/CardTags.astro";
+import CardBuy from "@/components/card/CardBuy.astro";
+import CardSimilar from "@/components/card/CardSimilar.astro";
+import CardRating from "@/components/card/CardRating.astro";
+import CardBonuses from "@/components/card/CardBonuses.astro";
+import CardPackage from "@/components/card/CardPackage.astro";
+import CardFeatures from "@/components/card/CardFeatures.astro";
+---
+
+<article class="product-card">
+  <div class="product-card-inner">
+    <div class="_gallery">
+      <CardGallery />
+    </div>
+
+    <div class="_info single-product">
+      <div class="_title">
+        <CardHeader />
+      </div>
+
+      <div class="_col">
+        <CardTags />
+        <CardBuy />
+        <CardSimilar />
+      </div>
+      <div class="_col">
+        <CardRating />
+        <CardBonuses />
+        <CardPackage />
+      </div>
+    </div>
+    <div class="_features">
+      <CardFeatures />
+    </div>
+  </div>
+</article>
+
+<style lang="scss" is:global>
+  .product-card {
+    padding: 32px 16px;
+    font-size: 15px;
+  }
+
+  .product-card-inner {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: start;
+    gap: 16px 32px;
+
+    @media (min-width: 992px) {
+      grid-template-columns: minmax(0, 4fr) minmax(640px, 6fr);
+    }
+
+    ._info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: start;
+        align-content: start;
+        gap: 16px 32px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        ._col {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+    }
+
+    ._title {
+      grid-column: 1/-1;
+
+      @media (width < 768px) {
+        order: 2;
+      }
+    }
+
+    ._col {
+      display: contents;
+    }
+
+    ._features {
+      grid-column: 1/-1;
+      margin-top: 40px;
+    }
+  }
+</style>

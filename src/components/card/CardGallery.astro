@@ -1,0 +1,36 @@
+<div class="card-gallery">
+  <div class="_item">
+    <img src="https://topcvety.ru/upload/goods/1253/images/6638/middle-image-6638-1742883988.jpeg" alt="">
+  </div>
+  <div class="_item">
+    <img src="https://topcvety.ru/upload/goods/1253/images/6638/small-image-6638-1742883988.jpeg" alt="">
+  </div>
+  <div class="_item">
+    <img src="https://topcvety.ru/upload/goods/1253/images/6639/small-image-6639-1742883988.jpeg" alt="">
+  </div>
+  <div class="_item">
+    <img src="https://topcvety.ru/upload/goods/1253/images/6640/small-image-6640-1742883989.jpeg" alt="">
+  </div>
+</div>
+
+<style lang="scss" is:global>
+.card-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+
+  ._item {
+    aspect-ratio: 1;
+
+    &:first-child {
+      grid-column: 1/-1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+</style>

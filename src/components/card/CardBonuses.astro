@@ -1,0 +1,51 @@
+<div class="tc-product-bonuses">
+  <div>Бонусы к букету</div>
+  <div class="_inner">
+    <div class="_item-bonus">
+      <img src="/images/cookie.png" />
+    </div>
+    <div class="_item-bonus">
+      <img src="/images/letter.png" />
+    </div>
+    <div class="_item-bonus">
+      <img src="/images/soil.png" />
+    </div>
+    <div class="_item-bonus">
+      <img src="/images/instrument.png" />
+    </div>
+    <div class="_item-bonus">
+      <img src="/images/bowl.png" />
+    </div>
+  </div>
+</div>
+
+<style lang="scss" is:global>
+  .tc-product-bonuses {
+    ._inner {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+
+      ._item-bonus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        padding: 8px;
+        border-radius: 4px;
+        background: #e5e5e5;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    @media (width < 768px) {
+      order: 6;
+    }
+  }
+</style>

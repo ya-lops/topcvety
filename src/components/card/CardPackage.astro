@@ -1,0 +1,56 @@
+<div class="tc-product-package">
+  <div>Упаковка</div>
+  <div class="_inner">
+    <div class="_item-package">
+      <input type="radio" name="product-package-selector" class="btn-check" id="btn-check-package-0" autocomplete="off" checked>
+      <label for="btn-check-package-0">По умолчанию +0 руб.</label>
+    </div>
+    <div class="_item-package">
+      <input type="radio" name="product-package-selector" class="btn-check" id="btn-check-package-1" autocomplete="off">
+      <label for="btn-check-package-1">Крафт-бумага +490 руб.</label>
+    </div>
+    <div class="_item-package">
+      <input type="radio" name="product-package-selector" class="btn-check" id="btn-check-package-2" autocomplete="off">
+      <label for="btn-check-package-2">Цветная матовая пленка +490 руб.</label>
+    </div>
+    <div class="_item-package">
+      <input type="radio" name="product-package-selector" class="btn-check" id="btn-check-package-3" autocomplete="off">
+      <label for="btn-check-package-3">Согласовать со мной +490 руб.</label>
+    </div>
+  </div>
+</div>
+
+<style lang="scss" is:global>
+  .tc-product-package {
+    ._inner {
+      margin-top: 8px;
+    }
+
+    ._item-package {
+      input {
+        display: none;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #5FA185;
+        font-size: 15px;
+        color: #000;
+        cursor: pointer;
+      }
+
+      input:checked + label {
+        font-weight: 600;
+        color: #5FA185;
+      }
+    }
+
+    @media (width < 768px) {
+      order: 10;
+    }
+  }
+</style>

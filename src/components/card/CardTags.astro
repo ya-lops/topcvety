@@ -1,0 +1,37 @@
+<div class="tc-tags">
+  <div class="is-new">Новинка</div>
+  <div class="is-promo">Акция</div>
+  <div class="is-hit">Хит</div>
+</div>
+
+<style lang="scss">
+  .tc-tags {
+    display: flex;
+    gap: 8px;
+
+    > * {
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .is-new {
+      background: #5897fb;
+    }
+
+    .is-promo {
+      background: #ff3551;
+    }
+
+    .is-hit {
+      background: #ff9900;
+    }
+
+    @media (width < 768px) {
+      order: 3;
+    }
+  }
+</style>

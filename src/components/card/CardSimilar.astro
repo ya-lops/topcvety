@@ -1,0 +1,76 @@
+<div class="tc-product-similar">
+  <div>Похожие варианты</div>
+  <div class="_inner">
+    <div class="_group for-count">
+      <a href="#" class="_item-similar">3</a>
+      <a href="#" class="_item-similar">5</a>
+      <a href="#" class="_item-similar">7</a>
+      <a href="#" class="_item-similar">9</a>
+      <a href="#" class="_item-similar">11</a>
+      <a href="#" class="_item-similar">17</a>
+      <a href="#" class="_item-similar is-current">51</a>
+      <a href="#" class="_item-similar">75</a>
+      <a href="#" class="_item-similar">101</a>
+    </div>
+    <div class="_group for-size">
+      <a href="#" class="_item-similar is-current">40 см</a>
+      <a href="#" class="_item-similar">60 см</a>
+      <a href="#" class="_item-similar">90 см</a>
+    </div>
+    <div class="_group for-pack">
+      <a href="#" class="_item-similar is-current">Букет</a>
+      <a href="#" class="_item-similar">В корзине</a>
+      <a href="#" class="_item-similar">В коробке</a>
+    </div>
+  </div>
+</div>
+
+<style lang="scss" is:global>
+  .tc-product-similar {
+    ._inner {
+      margin-top: 8px;
+    }
+
+    ._group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      gap: 12px 16px;
+      font-size: 15px;
+      line-height: 1;
+      text-transform: uppercase;
+
+      &.for-count {
+        font-size: 17px;
+      }
+
+      &.for-pack {
+        display: flex;
+      }
+    }
+
+    ._group + ._group {
+      margin-top: 16px;
+    }
+
+    ._item-similar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      flex-basis: max-content;
+      height: 42px;
+      border: 1px solid #000;
+      border-radius: 4px;
+
+      &.is-current {
+        border-color: #e5e5e5;
+        background: #e5e5e5;
+        font-weight: 600;
+      }
+    }
+
+    @media (width < 768px) {
+      order: 12;
+    }
+  }
+</style>

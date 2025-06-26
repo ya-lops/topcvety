@@ -1,0 +1,65 @@
+<div class="tc-product-benefits">
+  <div class="_item-benefit">
+    <div class="_label">Фото букета перед доставкой</div>
+    <div class="_icon">
+      <img src="/images/icon-check.png" />
+    </div>
+  </div>
+  <div class="_item-benefit">
+    <div class="_label">Срочная доставка от 1 часа</div>
+    <div class="_icon">
+      <img src="/images/icon-truck.png" />
+    </div>
+  </div>
+  <div class="_item-benefit">
+    <div class="_label">Цветы простоят 5 дней или заменим букет</div>
+    <div class="_icon">
+      <img src="/images/icon-shield.png" />
+    </div>
+  </div>
+</div>
+
+<style lang="scss" is:global>
+  .tc-product-benefits {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 28px;
+
+    @media (width > 768px) {
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    ._item-benefit {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: 70px;
+      padding: 12px;
+      padding-left: 48px;
+      border-radius: 4px;
+      background: #5FA185;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    ._label {
+      flex: 1;
+      text-align: right;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+
+    ._icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(60px, 30%);
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+</style>
