@@ -1,8 +1,20 @@
 ---
+import BannerPhoto from "@/components/banner/BannerPhoto.astro";
+import BannerDelivery from "@/components/banner/BannerDelivery.astro";
+import BannerGuarantee from "@/components/banner/BannerGuarantee.astro";
 import Layout from "../layouts/Layout.astro";
 import Card from "@/components/card/Card.astro";
 ---
 
 <Layout>
+  <div style="margin-block: 20px;">
+    <BannerPhoto/>
+  </div>
+  <div style="margin-block: 20px;">
+    <BannerDelivery/>
+  </div>
+  <div style="margin-block: 20px;">
+    <BannerGuarantee/>
+  </div>
   <Card />
 </Layout>

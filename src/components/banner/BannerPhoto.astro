@@ -1,0 +1,151 @@
+<div class="tc-banner _for-photo-banner">
+  <div class="_left">
+    <div class="_text">
+      <div><span class="_big">Фото</span> букета</div>
+      <div>перед доставкой</div>
+    </div>
+    <div class="_icon">
+      <svg
+        width="161"
+        height="132"
+        viewBox="0 0 161 132"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_d_277_14)">
+          <path
+            d="M64.9117 96.5179C63.3848 98.1121 60.8552 98.168 59.2593 96.6429L32.4042 70.9779C30.808 69.4524 28.2776 69.5088 26.7509 71.1039L18.9127 79.2932C17.3857 80.8885 17.4405 83.4194 19.035 84.9472L59.858 124.062C61.4541 125.591 63.9879 125.536 65.5159 123.939L142.504 43.4568C144.031 41.8608 143.975 39.3294 142.379 37.8022L134.192 29.9657C132.596 28.4386 130.065 28.4936 128.537 30.0886L64.9117 96.5179Z"
+            fill="#FC0884"></path>
+          <path
+            d="M129.26 30.7806C130.406 29.5845 132.304 29.5427 133.5 30.6878L141.687 38.525C142.884 39.6704 142.926 41.5682 141.781 42.7652L64.7935 123.248C63.6476 124.445 61.7464 124.487 60.5494 123.34L19.7271 84.2249C18.5312 83.0791 18.49 81.1812 19.6352 79.9847L27.4734 71.7955C28.6185 70.5992 30.5164 70.5565 31.7136 71.7007L58.5681 97.3659C60.5629 99.2723 63.7252 99.2019 65.6338 97.2092L129.26 30.7806Z"
+            stroke="white"
+            stroke-width="2"></path>
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_277_14"
+            x="0.800781"
+            y="0.855377"
+            width="159.812"
+            height="130.318"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"></feColorMatrix>
+            <feOffset dy="-11"></feOffset>
+            <feGaussianBlur stdDeviation="8.5"></feGaussianBlur>
+            <feComposite in2="hardAlpha" operator="out"></feComposite>
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.77 0"
+            ></feColorMatrix>
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_277_14"></feBlend>
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_277_14"
+              result="shape"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </div>
+  <div class="_bg-layer">
+    <img src="/images/banner-photo-bg-02.png" alt="" />
+    <img src="/images/banner-photo-bg-01.png" alt="" />
+  </div>
+</div>
+
+<style lang="scss">
+  .tc-banner {
+    min-height: 220px;
+    background-color: #333848;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    &._for-photo-banner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      background-image: radial-gradient(
+        20.35% 111.36% at 69.74% 50%,
+        #7b87ae 0.63%,
+        #333848 99.8%
+      );
+
+      ._left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        padding-block: 32px;
+
+        @media (min-width: 992px) {
+          translate: 70px 0;
+        }
+
+        @media (min-width: 1200px) {
+          translate: 120px 0;
+        }
+      }
+
+      ._text {
+        place-self: center;
+        font-size: 25px;
+        line-height: 1;
+        color: #fff;
+        text-align: right;
+      }
+
+      ._big {
+        font-weight: 800;
+        font-size: 50px;
+        letter-spacing: -5%;
+      }
+
+      ._bg-layer {
+        position: relative;
+
+        img {
+          position: absolute;
+          height: 100%;
+          right: 0;
+          top: 0;
+
+          @media (width < 991px) {
+            right: initial;
+            left: 0;
+            max-width: initial;
+            scale: 0.75;
+
+            &:first-child {
+              transform-origin: top left;
+              bottom: 0;
+              top: auto;
+            }
+
+            &:last-child {
+              transform-origin: bottom left;
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      margin: 0;
+    }
+
+    svg {
+      max-width: 130px;
+    }
+  }
+</style>
