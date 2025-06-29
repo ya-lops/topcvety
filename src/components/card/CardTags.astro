@@ -1,7 +1,7 @@
 <div class="tc-tags">
-  <div class="is-new">Новинка</div>
-  <div class="is-promo">Акция</div>
-  <div class="is-hit">Хит</div>
+  <div class="_item-tag is-new">Новинка</div>
+  <div class="_item-tag is-promo">Акция</div>
+  <div class="_item-tag is-hit">Хит</div>
 </div>
 
 <style lang="scss">
@@ -9,7 +9,11 @@
     display: flex;
     gap: 8px;
 
-    > * {
+    @media (width < 768px) {
+      order: 3;
+    }
+
+    ._item-tag {
       padding: 4px 8px;
       border-radius: 4px;
       text-transform: uppercase;
@@ -28,10 +32,6 @@
 
     .is-hit {
       background: #ff9900;
-    }
-
-    @media (width < 768px) {
-      order: 3;
     }
   }
 </style>
