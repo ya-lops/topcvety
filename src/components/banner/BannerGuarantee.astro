@@ -1,7 +1,7 @@
 <div class="tc-banner _for-guarantee-banner">
   <div class="_left">
     <div class="_text">
-      <div>Цветы простоят <span class="_big">5 дней</span></div>
+      <div>Цветы простоят <span class="_big">5&nbsp;дней</span></div>
       <div>или заменим букет</div>
     </div>
     <div class="_icon">
@@ -48,6 +48,10 @@
       grid-template-columns: minmax(0, 5fr) minmax(0, 2fr);
       background-image: radial-gradient(17.36% 95% at 84.09% 50%, #7B87AE 0.63%, #333848 100%);
 
+      @media (width < 992px) {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+      }
+
 
       ._left {
         display: flex;
@@ -56,6 +60,10 @@
         flex-wrap: wrap;
         column-gap: min(8vw, 90px);
         padding-block: 32px;
+
+        @media (width < 992px) {
+          justify-content: center;
+        }
       }
 
       ._text {
@@ -64,6 +72,10 @@
         line-height: 1;
         color: #fff;
         text-align: right;
+
+        @media (width < 992px) {
+          text-align: center;
+        }
       }
 
       ._big {
@@ -81,6 +93,10 @@
           right: 0;
           top: 0;
           max-width: initial;
+
+          @media (width < 992px) {
+            translate: 30% 0;
+          }
         }
       }
     }
