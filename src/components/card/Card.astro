@@ -1,6 +1,5 @@
 ---
 import CardGallery from "@/components/card/CardGallery.astro";
-import CardHeader from "@/components/card/CardHeader.astro";
 import CardTags from "@/components/card/CardTags.astro";
 import CardBuy from "@/components/card/CardBuy.astro";
 import CardSimilar from "@/components/card/CardSimilar.astro";
@@ -19,7 +18,13 @@ import CardFeatures from "@/components/card/CardFeatures.astro";
 
     <div class="_info single-product">
       <div class="_title">
-        <CardHeader />
+        <header class="_card-header">
+          <h1 itemprop="name">Букет из 51 розы микс №536</h1>
+          <div class="_code">
+            <span class="_code-label">Артикул: </span>
+            <span class="_code-value">1253</span>
+          </div>
+        </header>
       </div>
 
       <div class="_col">
@@ -38,59 +43,3 @@ import CardFeatures from "@/components/card/CardFeatures.astro";
     </div>
   </div>
 </article>
-
-<style lang="scss" is:global>
-  .tc-product-card {
-    padding: 32px 0;
-    font-size: 15px;
-
-    ._product-card-inner {
-      display: grid;
-      grid-template-columns: 100%;
-      align-items: start;
-      gap: 16px 32px;
-
-      @media (min-width: 992px) {
-        grid-template-columns: minmax(0, 4fr) minmax(640px, 6fr);
-      }
-
-      ._info {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-
-        @media (min-width: 768px) {
-          display: grid;
-          grid-template-columns: 100%;
-          align-items: start;
-          align-content: start;
-          gap: 16px 32px;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-
-          ._col {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-          }
-        }
-      }
-
-      ._title {
-        grid-column: 1/-1;
-
-        @media (width < 768px) {
-          order: 2;
-        }
-      }
-
-      ._col {
-        display: contents;
-      }
-
-      ._features {
-        grid-column: 1/-1;
-        margin-top: 40px;
-      }
-    }
-  }
-</style>

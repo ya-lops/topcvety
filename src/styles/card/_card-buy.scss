@@ -1,0 +1,160 @@
+.tc-buy {
+  position: relative;
+
+  ._price {
+    margin-bottom: 32px;
+    font-family: Lora;
+    color: #404040;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .add-to-cart-with,
+  .add-to-cart-with:focus,
+  .add-to-cart,
+  .add-to-cart:focus {
+    --_color: #fc0884;
+
+    min-width: min-content;
+    width: 100%;
+    padding-inline: 8px;
+    border-color: var(--_color);
+    background: var(--_color);
+    box-shadow: 5px 6px 10px 0px #0000002e;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .add-to-cart-with,
+  .add-to-cart-with:focus {
+    --_color: #5fa185;
+  }
+
+  .add-to-cart:hover {
+    --_color: color-mix(in oklab, #fc0884, #000 10%);
+  }
+
+  .add-to-cart-with {
+    --_color: #5fa185;
+  }
+
+  .add-to-cart-with:hover {
+    --_color: color-mix(in oklab, #5fa185, #000 10%);
+  }
+
+  .add-to-cart {
+    min-width: 180px;
+  }
+
+  ._description {
+    padding: 4px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: #5fa185;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  @media (width < 768px) {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 16px;
+    order: 4;
+
+    ._price,
+    ._description {
+      grid-column: 1/-1;
+    }
+
+    ._description {
+      order: 99;
+    }
+  }
+
+  @media (width < 480px) {
+    grid-template-columns: 100%;
+  }
+}
+
+.tc-popover {
+  position: relative;
+
+  ._popover-content {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: none;
+    gap: 12px;
+    padding: 16px 20px;
+    box-shadow:
+      0 0 0 10px #fff,
+      0px 0px 14.4px 17px #0000000f;
+    background: #fff;
+    border-radius: 20px;
+    font-size: 15px;
+    animation: showin 0.25s forwards;
+
+    header {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 4px;
+      background: #e5e5e5;
+      font-weight: 700;
+
+      &.for-whatsapp {
+        background: #25d366;
+        color: #fff;
+      }
+
+      &.for-telegram {
+        background: #2aabee;
+        color: #fff;
+      }
+    }
+
+    ._separator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #0000004d;
+
+      &::after,
+      &::before {
+        content: "";
+        height: 0.5px;
+        flex: 1;
+        background: currentColor;
+        translate: 0 2px;
+      }
+    }
+  }
+
+  &:focus-within ._popover-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@keyframes showin {
+  from {
+    opacity: 0;
+    scale: 0.75;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}

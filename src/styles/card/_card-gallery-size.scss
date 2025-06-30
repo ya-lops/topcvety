@@ -1,0 +1,30 @@
+.tc-product-size {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #ffffffb2;
+
+  ._item-size {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 115%;
+    color: #000;
+  }
+
+  ._icon {
+    display: flex;
+  }
+
+  ._label {
+    opacity: 0.3;
+  }
+}

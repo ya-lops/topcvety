@@ -1,0 +1,29 @@
+.tc-product-bonuses {
+  ._inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+
+    ._item-bonus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      padding: 8px;
+      border-radius: 4px;
+      background: #e5e5e5;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (width < 768px) {
+    order: 6;
+  }
+}
