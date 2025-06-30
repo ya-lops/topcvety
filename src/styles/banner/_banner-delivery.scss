@@ -48,7 +48,11 @@
       }
 
       @media (width < 475px) {
-        right: -45%;
+        right: -70%;
+      }
+
+      @media (width < 465px) {
+        right: -80%;
       }
     }
   }
