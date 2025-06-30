@@ -1,17 +1,75 @@
-<!-- Здесь используются для кнопок классы из бутстрапа -->
- <!-- Поэтому нужно тестить -->
-
+<!-- Здесь используются для кнопок классы из бутстрапа --><!-- Поэтому нужно тестить -->
 <div class="tc-buy">
   <div class="_price">4990 руб.</div>
   <button class="button button-lg add-to-cart">Купить</button>
   <p class="_description">
     Для данного товара доступна бесплатная доставка по Москве
   </p>
-  <button class="button button-lg add-to-cart-with">Купить с менеджером</button>
+  <div class="tc-popover">
+    <button class="button button-lg add-to-cart-with get-popover"
+      >Купить с менеджером</button
+    >
+    <aside class="_popover-content" tabindex="-1">
+      <header>купить с менеджером</header>
+      <a href="#support" class="for-support">
+        <div class="_icon">
+          <svg
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.6113 1.09259C17.2575 1.09259 21.6484 5.04693 21.6484 9.71075C21.6484 14.3746 17.2575 18.3289 11.6113 18.3289C9.94184 18.3289 8.32742 18.3256 6.28418 17.5623L5.97852 17.4481L5.68652 17.5936L2.29004 19.2899L3.58594 15.5057L3.7207 15.1121L3.45801 14.7889C2.6787 13.8311 2.22345 13.1098 1.95215 12.3758C1.6824 11.646 1.57422 10.8493 1.57422 9.71075C1.57422 5.04693 5.96517 1.09259 11.6113 1.09259Z"
+              stroke="black"
+              stroke-width="1.5"></path>
+          </svg>
+        </div>
+        <span>Чат с поддержкой</span>
+      </a>
+      <div class="_separator">или</div>
+      <a href="#whatsapp" class="for-whatsapp">
+        <div class="_icon">
+          <svg
+            width="22"
+            height="21"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3116 3.0625C16.336 1.09375 13.7018 0 10.9213 0C5.14086 0 0.457935 4.66667 0.457935 10.4271C0.457935 12.25 0.970131 14.0729 1.84818 15.6042L0.384766 21L5.94574 19.5417C7.48233 20.3438 9.16525 20.7812 10.9213 20.7812C16.7018 20.7812 21.3848 16.1146 21.3848 10.3542C21.3116 7.65625 20.2872 5.03125 18.3116 3.0625ZM15.9701 14.1458C15.7506 14.7292 14.7262 15.3125 14.214 15.3854C13.775 15.4583 13.1896 15.4583 12.6043 15.3125C12.2384 15.1667 11.7262 15.0208 11.1409 14.7292C8.50672 13.6354 6.82379 11.0104 6.67745 10.7917C6.53111 10.6458 5.57989 9.40625 5.57989 8.09375C5.57989 6.78125 6.23842 6.19792 6.45794 5.90625C6.67745 5.61458 6.97013 5.61458 7.18964 5.61458C7.33598 5.61458 7.55549 5.61458 7.70184 5.61458C7.84818 5.61458 8.06769 5.54167 8.2872 6.05208C8.50672 6.5625 9.01891 7.875 9.09208 7.94792C9.16525 8.09375 9.16525 8.23958 9.09208 8.38542C9.01891 8.53125 8.94574 8.67708 8.7994 8.82292C8.65306 8.96875 8.50671 9.1875 8.43354 9.26042C8.2872 9.40625 8.14086 9.55208 8.2872 9.77083C8.43355 10.0625 8.94574 10.8646 9.75062 11.5937C10.775 12.4687 11.5799 12.7604 11.8726 12.9063C12.1653 13.0521 12.3116 12.9792 12.4579 12.8333C12.6043 12.6875 13.1165 12.1042 13.2628 11.8125C13.4092 11.5208 13.6287 11.5938 13.8482 11.6667C14.0677 11.7396 15.3848 12.3958 15.6043 12.5417C15.897 12.6875 16.0433 12.7604 16.1165 12.8333C16.1896 13.0521 16.1896 13.5625 15.9701 14.1458Z"
+              fill="white"></path>
+          </svg>
+        </div>
+        <span>Связаться в WhatsApp</span>
+      </a>
+      <div class="_separator">или</div>
+      <a href="#telegram" class="for-telegram">
+        <div class="_icon">
+          <svg
+            width="21"
+            height="19"
+            viewBox="0 0 21 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.17492 9.00225L5.77302 10.7168L7.56548 16.4839C7.64341 16.8735 8.11102 16.9515 8.42276 16.7177L10.9946 14.6135C11.2284 14.3797 11.618 14.3797 11.9298 14.6135L16.5278 17.9646C16.8396 18.1984 17.3072 18.0425 17.3851 17.6529L20.8142 1.28683C20.8921 0.897162 20.5025 0.507497 20.1128 0.663364L1.17492 7.98912C0.707318 8.14499 0.707318 8.84639 1.17492 9.00225ZM7.33169 9.85952L16.372 4.32624C16.5278 4.24831 16.6837 4.48211 16.5278 4.56004L9.12415 11.4961C8.89035 11.7299 8.65655 12.0417 8.65655 12.4313L8.42276 14.3017C8.42276 14.5355 8.03308 14.6135 7.95515 14.3017L7.01994 10.8727C6.78614 10.483 6.94202 10.0154 7.33169 9.85952Z"
+              fill="white"></path>
+          </svg>
+        </div>
+        <span>Связаться в Telegram</span>
+      </a>
+    </aside>
+  </div>
 </div>
 
 <style lang="scss" is:global>
   .tc-buy {
+    position: relative;
+
     ._price {
       margin-bottom: 32px;
       font-family: Lora;
@@ -19,8 +77,6 @@
       font-size: 28px;
       font-weight: 500;
     }
-
-    
 
     .add-to-cart-with,
     .add-to-cart-with:focus,
@@ -39,6 +95,11 @@
       line-height: 1;
       font-weight: 600;
       text-transform: uppercase;
+    }
+
+    .add-to-cart-with,
+    .add-to-cart-with:focus {
+      --_color: #5fa185;
     }
 
     .add-to-cart:hover {
@@ -85,6 +146,85 @@
 
     @media (width < 480px) {
       grid-template-columns: 100%;
+    }
+  }
+
+  .tc-popover {
+    position: relative;
+
+    ._popover-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      display: none;
+      gap: 12px;
+      padding: 16px 20px;
+      box-shadow:
+        0 0 0 10px #fff,
+        0px 0px 14.4px 17px #0000000f;
+      background: #fff;
+      border-radius: 20px;
+      font-size: 15px;
+      animation: showin 0.25s forwards;
+
+      header {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px;
+        border-radius: 4px;
+        background: #e5e5e5;
+        font-weight: 700;
+
+        &.for-whatsapp {
+          background: #25d366;
+          color: #fff;
+        }
+
+        &.for-telegram {
+          background: #2aabee;
+          color: #fff;
+        }
+      }
+
+      ._separator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #0000004d;
+
+        &::after,
+        &::before {
+          content: "";
+          height: 0.5px;
+          flex: 1;
+          background: currentColor;
+          translate: 0 2px;
+        }
+      }
+    }
+
+    &:focus-within ._popover-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @keyframes showin {
+    from {
+      opacity: 0;
+      scale: 0.75;
+    }
+
+    to {
+      opacity: 1;
+      scale: 1;
     }
   }
 </style>
