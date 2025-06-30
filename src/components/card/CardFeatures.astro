@@ -25,7 +25,7 @@
     grid-template-columns: 100%;
     gap: 28px;
 
-    @media (width > 768px) {
+    @media (width > 960px) {
       grid-template-columns: repeat(3, minmax(0,1fr));
     }
 
@@ -33,15 +33,19 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      height: 70px;
+      min-height: 70px;
       padding: 12px;
-      padding-left: 48px;
+      padding-left: clamp(8px, 8vw, 32px);
       border-radius: 4px;
       background: #5FA185;
       color: #fff;
       font-size: 16px;
       line-height: 1.4;
       font-weight: 600;
+
+      @media (width > 320px) and (width < 960px) {
+        padding-right: clamp(8px, 17vw, 128px); ;
+      }
     }
 
     ._label {
