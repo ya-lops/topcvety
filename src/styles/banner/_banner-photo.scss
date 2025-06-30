@@ -1,0 +1,62 @@
+.tc-banner._for-photo-banner {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background-image: radial-gradient(
+    20.35% 111.36% at 69.74% 50%,
+    #7b87ae 0.63%,
+    #333848 99.8%
+  );
+
+  ._content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-block: 32px;
+
+    @media (min-width: 992px) {
+      translate: 70px 0;
+    }
+
+    @media (min-width: 1200px) {
+      translate: 120px 0;
+    }
+  }
+
+  ._icon {
+    @media (width < 360px) {
+      translate: 20% 0;
+    }
+  }
+
+  ._bg-layer {
+    img {
+      left: initial;
+      right: 0;
+
+      @media (width < 991px) {
+        right: initial;
+        left: 0;
+        max-width: initial;
+        scale: 0.75;
+
+        &:first-child {
+          transform-origin: top left;
+          bottom: 0;
+          top: auto;
+        }
+
+        &:last-child {
+          transform-origin: bottom left;
+        }
+      }
+
+      @media (width > 767px) {
+        translate: 20% 0;
+      }
+    }
+  }
+
+  svg {
+    max-height: 98px;
+  }
+}

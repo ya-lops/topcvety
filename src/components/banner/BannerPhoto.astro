@@ -1,5 +1,5 @@
 <div class="tc-banner _for-photo-banner">
-  <div class="_left">
+  <div class="_content">
     <div class="_text">
       <div><span class="_big">Фото</span> букета</div>
       <div>перед доставкой</div>
@@ -64,88 +64,3 @@
   </div>
 </div>
 
-<style lang="scss">
-  .tc-banner {
-    min-height: 220px;
-    background-color: #333848;
-
-    border-radius: 8px;
-    overflow: hidden;
-
-    &._for-photo-banner {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      background-image: radial-gradient(
-        20.35% 111.36% at 69.74% 50%,
-        #7b87ae 0.63%,
-        #333848 99.8%
-      );
-
-      ._left {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        padding-block: 32px;
-
-        @media (min-width: 992px) {
-          translate: 70px 0;
-        }
-
-        @media (min-width: 1200px) {
-          translate: 120px 0;
-        }
-      }
-
-      ._text {
-        place-self: center;
-        font-size: 25px;
-        line-height: 1;
-        color: #fff;
-        text-align: right;
-      }
-
-      ._big {
-        font-weight: 800;
-        font-size: 50px;
-        letter-spacing: -5%;
-      }
-
-      ._bg-layer {
-        position: relative;
-
-        img {
-          position: absolute;
-          height: 100%;
-          right: 0;
-          top: 0;
-
-          @media (width < 991px) {
-            right: initial;
-            left: 0;
-            max-width: initial;
-            scale: 0.75;
-
-            &:first-child {
-              transform-origin: top left;
-              bottom: 0;
-              top: auto;
-            }
-
-            &:last-child {
-              transform-origin: bottom left;
-            }
-          }
-        }
-      }
-    }
-
-    img {
-      margin: 0;
-    }
-
-    svg {
-      max-width: 130px;
-    }
-  }
-</style>

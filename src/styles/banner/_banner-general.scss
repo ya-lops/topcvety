@@ -1,0 +1,42 @@
+.tc-banner {
+  display: grid;
+  min-height: 220px;
+  max-height: 285px;
+  border-radius: 8px;
+  background-color: #333848;
+  overflow: hidden;
+
+  @media (width < 576px) {
+    height: 285px;
+  }
+
+  ._text {
+    place-self: center;
+    color: #fff;
+    font-size: clamp(18px, 5vw, 25px);
+    line-height: 1;
+    text-align: right;
+  }
+
+  ._big {
+    font-weight: 800;
+    font-size: clamp(32px, 10vw, 50px);
+    letter-spacing: -5%;
+  }
+
+  ._bg-layer {
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      max-width: initial;
+    }
+  }
+
+  img {
+    margin: 0;
+  }
+}

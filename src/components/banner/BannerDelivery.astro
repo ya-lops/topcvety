@@ -2,7 +2,7 @@
   <div class="_bg-layer">
     <img src="/images/banner-delivery-bg-01.png" alt="" />
   </div>
-  <div class="_right">
+  <div class="_content">
     <div class="_icon">
       <svg
         width="157"
@@ -56,84 +56,7 @@
     </div>
     <div class="_text">
       <div>Срочная доставка</div>
-      <div><span class="_big">от 1 часа</span></div>
+      <div><span class="_big">от 1&nbsp;часа</span></div>
     </div>
   </div>
 </div>
-
-<style lang="scss">
-  .tc-banner {
-    min-height: 220px;
-    max-height: 285px;
-    border-radius: 8px;
-    overflow: hidden;
-
-    &._for-delivery-banner {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 5fr);
-      background-image: radial-gradient(
-        17.52% 95.91% at 9.57% 56.82%,
-        #7b87ae 0.63%,
-        #333848 100%
-      );
-      
-      @media (width < 1200px) {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-      }
-
-      @media (width < 800px) {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      }
-
-      ._right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap-reverse;
-        column-gap: 40px;
-        row-gap: 32px;
-        padding-block: 32px;
-
-        @media (width < 800px) {
-          justify-content: center;
-          text-align: left;
-          padding-right: 8px;
-        }
-      }
-
-      ._text {
-        place-self: center;
-        font-size: 25px;
-        line-height: 1;
-        color: #fff;
-        text-align: right;
-      }
-
-      ._big {
-        font-weight: 800;
-        font-size: 50px;
-        letter-spacing: -5%;
-      }
-
-      ._bg-layer {
-        position: relative;
-
-        img {
-          position: absolute;
-          height: 100%;
-          left: 0;
-          top: 0;
-          max-width: initial;
-        }
-      }
-    }
-
-    img {
-      margin: 0;
-    }
-
-    svg {
-      max-width: 148px;
-    }
-  }
-</style>

@@ -1,0 +1,62 @@
+.tc-banner._for-guarantee-banner {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 2fr);
+  background-image: radial-gradient(
+    17.36% 95% at 84.09% 50%,
+    #7b87ae 0.63%,
+    #333848 100%
+  );
+
+  @media (width < 992px) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+  }
+
+  @media (width < 800px) {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  ._content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    column-gap: min(8vw, 50px);
+    row-gap: 12px;
+    padding-block: 32px;
+
+    @media (width < 992px) {
+      justify-content: center;
+    }
+  }
+
+  ._text {
+    @media (width < 992px) {
+      text-align: center;
+    }
+  }
+
+  ._bg-layer {
+    img {
+      @media (width > 768px) {
+        left: auto;
+      right: 0;
+      }
+
+      @media (width < 500px) {
+        right: auto;
+        left: -5%;
+      }
+
+      @media (width < 475px) {
+        left: -15%;
+      }
+    }
+  }
+
+  svg {
+    max-height: 114px;
+
+    @media (width < 576px) {
+      scale: 0.7;
+    }
+  }
+}

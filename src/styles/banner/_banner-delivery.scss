@@ -1,0 +1,63 @@
+.tc-banner._for-delivery-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 5fr);
+  background-image: radial-gradient(
+    17.52% 95.91% at 9.57% 56.82%,
+    #7b87ae 0.63%,
+    #333848 100%
+  );
+
+  @media (width < 1200px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  @media (width < 800px) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  ._content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap-reverse;
+    column-gap: 40px;
+    row-gap: 12px;
+    padding-block: 24px;
+
+    @media (width < 800px) {
+      justify-content: center;
+      text-align: left;
+      padding-right: 8px;
+    }
+  }
+
+  ._text {
+    place-self: center;
+    text-align: right;
+
+    @media (width < 576px) {
+      text-align: center;
+    }
+  }
+
+  ._bg-layer {
+    img {
+      @media (width < 500px) {
+        left: auto;
+        right: -55%;
+      }
+
+      @media (width < 475px) {
+        right: -45%;
+      }
+    }
+  }
+
+  svg {
+    max-height: 112px;
+
+    @media (width < 576px) {
+      scale: 0.7;
+    }
+  }
+}
